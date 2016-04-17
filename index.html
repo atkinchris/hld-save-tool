@@ -15,19 +15,33 @@
       <p>
         Quickly thrown together by Chris Atkin, <a href="https://github.com/atkinchris/hld-save-tool">Source on GitHub</a>.
       </p>
-      <form onsubmit="process()" action="#">
+      <form onsubmit="process()" action="#" class="well">
         <div class="form-group">
           <label for="original">Original Save</label>
           <p class="small">This is your original save file, to be transferred to the target computer.</p>
-          <input type="file" id="original" name="original" accept=".sav" required />
+          <input type="file" id="original" name="original" accept=".sav" class="form-control" required />
         </div>
         <div class="form-group">
         <label for="target">Target Save</label>
         <p class="small">A save from the target computer.</p>
-        <input type="file" id="target" name="target" accept=".sav" required />
+        <input type="file" id="target" name="target" accept=".sav" class="form-control" required />
         </div>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="btn btn-default">
       </form>
+      <h3 class="text-muted">Save File Locations</h3>
+      <p>
+        These are the default locations where save files are stored.
+        Save files are named <code>HyperLight_RecordOfTheDrifter_0.sav</code>,
+        where the number is the slot of the save file.
+      </p>
+      <dl class="dl-horizontal well">
+        <dt>OSX</dt>
+        <dd><code>~/Library/Application Support/com.HeartMachine.HyperLightDrifter</code></dd>
+        <dt>Windows</dt>
+        <dd><code>%LOCALAPPDATA%\HyperLightDrifter</code></dd>
+        <dt>Linux</dt>
+        <dd><code>~/.config/HyperLightDrifter</code></dd>
+      </dl>
     </div>
     <script src="scripts.js" charset="utf-8"></script>
   </body>
